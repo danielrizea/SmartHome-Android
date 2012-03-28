@@ -1,0 +1,42 @@
+Rizea Daniel-Octavian
+341C1
+
+
+
+				SmartHome SI Tema2
+
+
+	Functionalitati:
+		Am implementat tema conform cu cerintele enuntului.
+
+	Pentru testarea aplicatiei este necesara o conexiune la internet.
+	Cand este lansata aplicatia apare o lista default cu senzorii de temperatura.In partea superioara a ecranului este un buton din care se poate selecta tipul de senzor dorit.
+	Functionalitati onClick pe elemente din lista :
+		Daca elementul este:
+			-un comutator (se face toggle se inchide sau deschide)
+			-un senzor de temperatura sau debit se porneste o alta activitate in care se afiseaza informatii generale (momentan nu prea multe), iar daca se face stanga dreapta touche event se face fliping la ecranul urmator cu datele de istorie de pe ultimeel 5 inregistrari.
+
+			-un senzor de thermostat duce la meniul de setare al thermostatului. Pentru setare MinHeat se fece flip vertical in partea stanga a ecranului, iar pentru MaxHeat flip vertical in partea dreapta a ecranului. 
+La fina se apasa pe butonul save.
+
+			
+		La inceputul aplicatiei, se verifica starea senzorilor (cei cu baterii daca a scazut sub un anumit prag si se alerteaza utilizatorul)
+
+		De precizat ca schimbarile nu se produc imediat ce s-a actionat comanda in view, ci o data la 5 secunde cand este programat un update automat declansat de provider,acesta anunta prin handler refresh-ul la UI. (Am lasat asa pentru a fi mai transparent faptul la testare si notare ca updateurile se produc).
+
+	Structura proiectului:
+		pachetul:
+			upb.smarthome :
+				MainScreenActivity  : activitate ce afiseaza lsita de senzori
+				SensorDetails : activitate ce afiseaza detaliile unui senzor selectat din lista de la MainScreeActivity (doar pentru FLow si Temperature)
+				ThermostatControl : activitate ce trimite comanda la thermostat
+				MyViewFlipper : activitate ce prinde gestul dual touch si face flipping de la un ecran la altul
+			upb.smarthome.clusters
+				pachet ce cuprinda constante si clase pentru a organzia cat mai bine datele din standardul ZigBee
+			upb.smarthome.data
+				contine smart home providerul de furnizeaza datele 	
+			upb.smarthome.devices
+				contine tipul de baza LogicalDevice si extinderi ale acestuia pentru senzorii de fata
+			upb.smarthome.restcomm
+				contine clase ce comunica prin rest cu serverul si parseaza datele primite
+	

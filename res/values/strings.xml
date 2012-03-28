@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SmartHomeActivity!</string>
+    <string name="app_name">SmartHome</string>
+    <string name="chose_senzor_type">Chose senzor type</string>
+    <string name="thermostat_button_text">Save values</string>
+
+</resources>

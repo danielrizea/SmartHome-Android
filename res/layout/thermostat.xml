@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+        >
+      <ImageView android:id="@+id/thermostat_image" 
+             android:layout_width="wrap_content" 
+             android:layout_height="wrap_content"
+      />    
+       <TextView android:id="@+id/thermostat_value_min"
+	           android:textSize="40sp"
+	           android:paddingTop="20dp"
+	           android:textColor="@android:color/white"
+	           android:layout_width="wrap_content" 
+	           android:layout_height="wrap_content"
+	           android:gravity="center_horizontal"
+	   />
+       <TextView android:id="@+id/thermostat_value_max"
+	           android:textSize="40sp"
+	           android:paddingTop="20dp"
+	           android:paddingLeft="5dp"
+	           android:textColor="@android:color/white"
+	           android:layout_width="wrap_content" 
+	           android:layout_height="wrap_content"
+	           android:gravity="center_horizontal"
+	   />
+      </LinearLayout>
+      
+     <TextView android:id="@+id/thermostat_position"
+	           android:textSize="20sp"
+	           android:paddingTop="20dp"
+	           android:textColor="@android:color/white"
+	           android:layout_width="wrap_content" 
+	           android:layout_height="wrap_content"
+	           android:gravity="center_horizontal"
+	   />
+     <Button
+     	android:id="@+id/thermostat_save"
+     	android:layout_height="wrap_content"
+     	android:layout_width="fill_parent"
+     	
+     	android:text="@string/thermostat_button_text"
+     	android:layout_gravity="bottom|clip_vertical"
+      />
+</LinearLayout>
+
